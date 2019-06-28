@@ -427,9 +427,10 @@ class Example(Frame):
                     if len(selected_string) > 0:
                         if command in self.pressCommand:
                             line_after_entity, cursor_index = self.replaceString(line_after_entity, selected_string, command, cursor_index)
+                            line = line_before_entity + line_after_entity
                         else:
                             return
-                line = line_before_entity + line_after_entity
+                
             if aboveLine_content != '':
                 aboveLine_content = aboveLine_content+ '\n'
             if belowLine_content != '':
